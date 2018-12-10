@@ -1,0 +1,23 @@
+html,body
+{
+    background: url(../img/background-21717_1920.jpg) center center fixed;
+    background-size: cover;
+}
+.heading
+{
+    font-size: 55px;
+    font-family: Roboto;
+    color: #fff;
+    margin-top:5rem;
+
+
+}
+.timer
+{
+    font-size: 50px;
+    font-family: Roboto;
+    color: #fff;
+    margin-top:0.4rem;
+}
+
+
