@@ -8,16 +8,43 @@ html,body
     font-size: 55px;
     font-family: Roboto;
     color: #fff;
-    margin-top:5rem;
+    margin-top:3rem;
 
 
+}
+.laptimer
+{
+    font-size: 4.5vh;
+    font-family: Roboto;
+    color: #fff;
+    margin-top:0.1rem;
 }
 .timer
 {
-    font-size: 50px;
+    font-size: 15vh;
     font-family: Roboto;
     color: #fff;
-    margin-top:0.4rem;
+    margin-top:0.2rem;
 }
 
+#button1
+{
+    font-family: Roboto;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-left:15vw; 
+    padding: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#button2
+{
+    font-family: Roboto;
+    font-size: 20px;
+    margin-top: 2.1rem;
+    margin-left:15vw; 
+    padding: 41px;
+    border-radius: 100%;
+    cursor: pointer;
+}
 
