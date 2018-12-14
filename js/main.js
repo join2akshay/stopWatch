@@ -43,16 +43,13 @@ $(document).ready(function () {
         timeMinute=Math.floor(timeCounter/6000);  
         timeSecond=Math.floor((timeCounter%6000)/100); 
         timeCentiseconds=(timeCounter%6000)%100;
-        console.log(timeMinute);
-        console.log(timeSecond);     
-        console.log(timeCentiseconds);
         $("#timeMinute").text(timeMinute); 
         $("#timeSecond").text(timeSecond);
         $("#timeCentisecond").text(timeCentiseconds);
            //1min=60*100centiSeconds=6000centiSeconds
            lapMinute=Math.floor(lapCounter/6000);       
-           lapSecond=Math.floor((lapCounter/6000)/100); 
-           lapCentiseconds=Math.floor((lapCounter/6000)%100);
+           lapSecond=Math.floor((lapCounter%6000)/100); 
+           lapCentiseconds=(lapCounter%6000)%100;
            $("#lapMinute").text(lapMinute); 
            $("#lapSecond").text(lapSecond);
            $("#lapCentisecond").text(lapCentiseconds);
