@@ -1,55 +1,40 @@
-html,body
-{
+html,
+body {
     background: url(../img/background-21717_1920.jpg) center center fixed;
     background-size: cover;
 }
-.heading
+#header
 {
-    font-size: 55px;
-    font-family: Roboto;
+    text-align: center;
+    font-size: 7vh;
     color: #fff;
-    margin-top:3rem;
-
-
+    font-family: roboto;
 }
-.laptimer
+#lap
 {
+    margin-top: 2vh;
+    text-align: right;
     font-size: 4.5vh;
-    font-family: Roboto;
     color: #fff;
-    margin-top:0.1rem;
+    font-family: roboto;
 }
-.timer
+#timer
 {
-    font-size: 15vh;
-    font-family: Roboto;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 9vh;
     color: #fff;
-    margin-top:0.2rem;
+    font-family: roboto;
 }
-
-#button1
+.control
 {
-    font-family: Roboto;
-    font-size: 20px;
-    margin-top: 2rem;
-    margin-left:15vw; 
-    padding: 40px;
+    margin: 1vw;
+    font-size: 4vh;
     border-radius: 100%;
+    background-color: cornflowerblue;
+    width: 10vw;
+    text-align: center;
+    height: 10vh;
+    padding-top: 10px;
     cursor: pointer;
-}
-#button2
-{
-    font-family: Roboto;
-    font-size: 20px;
-    margin-top: 2.1rem;
-    margin-left:15vw; 
-    padding: 41px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.lap
-{
-    height: 200px;
-    overflow-y: scroll;
 }
