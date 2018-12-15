@@ -29,7 +29,16 @@ $(document).ready(function () {
     {
         action=setInterval(function(){
             timeCounter++;
+            if(timeCounter==100*60*10)
+            {
+                timeCounter=0;
+            }
+
             lapCounter++;
+            if(lapCounter==100*60*10)
+            {
+                lapCounter=0;
+            }
              updateTime();
         },10);
 
@@ -71,7 +80,9 @@ $(document).ready(function () {
         //Stop Button
 
         $('#stopButton').click(function () { 
+            //Stop Timer
             clearInterval(action);
+            //Hide 'Stop' and 'Lap' button and show 'Resume' and 'Reset' button
             hideShow('#resumeButton','#resetButton');
             
         });
@@ -79,7 +90,9 @@ $(document).ready(function () {
         //Resume Button
 
         $('#resumeButton').click(function () { 
-            updateTime();
+            //Resume timer
+            startAction();
+            // Hide 'Resume' and 'Reset' button and show 'Stop' and 'Lap' button
             hideShow('#stopButton','#lapButton');   
         });
 
