@@ -14,6 +14,7 @@ $(document).ready(function () {
         //mode on
         mode=1;
         startAction();
+        hideShow('#stopButton','#lapButton');
     });
     
     //hideShow() funtion   
@@ -43,17 +44,46 @@ $(document).ready(function () {
         timeMinute=Math.floor(timeCounter/6000);  
         timeSecond=Math.floor((timeCounter%6000)/100); 
         timeCentiseconds=(timeCounter%6000)%100;
-        $("#timeMinute").text(timeMinute); 
-        $("#timeSecond").text(timeSecond);
-        $("#timeCentisecond").text(timeCentiseconds);
+        $("#timeMinute").text(formatNumber(timeMinute)); 
+        $("#timeSecond").text(formatNumber(timeSecond));
+        $("#timeCentisecond").text(formatNumber(timeCentiseconds));
            //1min=60*100centiSeconds=6000centiSeconds
-           lapMinute=Math.floor(lapCounter/6000);       
+          lapMinute=Math.floor(lapCounter/6000);       
            lapSecond=Math.floor((lapCounter%6000)/100); 
            lapCentiseconds=(lapCounter%6000)%100;
-           $("#lapMinute").text(lapMinute); 
-           $("#lapSecond").text(lapSecond);
-           $("#lapCentisecond").text(lapCentiseconds);
+           $("#lapMinute").text(formatNumber(lapMinute)); 
+           $("#lapSecond").text(formatNumber(lapSecond));
+           $("#lapCentisecond").text(formatNumber(lapCentiseconds));
         }
+        // formatNumber() function
+        function formatNumber(num)
+        {
+            if(num<10)
+            {
+                return '0'+num;
+            }
+            else
+            {
+                return num;
+            }
+        }
+
+        //Stop Button
+
+        $('#stopButton').click(function () { 
+            clearInterval(action);
+            hideShow('#resumeButton','#resetButton');
+            
+        });
+
+        //Resume Button
+
+        $('#resumeButton').click(function () { 
+            updateTime();
+            hideShow('#stopButton','#lapButton');   
+        });
+
+
 });
 
 
