@@ -6,7 +6,7 @@ body {
 #header
 {
     text-align: center;
-    font-size: 7vh;
+    font-size: 5vw;
     color: #fff;
     font-family: roboto;
 }
@@ -14,7 +14,7 @@ body {
 {
     margin-top: 2vh;
     text-align: right;
-    font-size: 4.5vh;
+    font-size: 3vw;
     color: #fff;
     font-family: roboto;
 }
@@ -22,19 +22,47 @@ body {
 {
     margin-top: 1vh;
     text-align: center;
-    font-size: 9vh;
+    font-size: 8vw;
     color: #fff;
     font-family: roboto;
 }
+#controlsContainer{     margin-bottom: 100px;    } 
 .control
 {
-    margin: 1vw;
-    font-size: 4vh;
-    border-radius: 100%;
-    background-color: cornflowerblue;
-    width: 10vw;
-    text-align: center;
-    height: 10vh;
-    padding-top: 10px;
+    color: white;
+    background-color: #d7A04e;     
+    height: 10vw;     
+    width: 10vw;     
+    border-radius: 100%;     
+    text-align: center;     
+    padding-top:35px;     
+    font-size: 2.5vw;     
     cursor: pointer;
+}
+.control :active
+{
+    color: #fff;
+}
+#laps
+{
+    overflow-y: scroll;
+    max-height: 250px;
+}
+#lapMain
+{
+    font-family: roboto;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin: 15px;
+    height: 50px;
+}
+#lapNumber
+{
+    font-size: 1.5em;
+    float: left;
+}
+#lapTime
+{
+   font-size: 2em;
+   float: right;
 }
