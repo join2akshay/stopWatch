@@ -96,7 +96,34 @@ $(document).ready(function () {
             hideShow('#stopButton','#lapButton');   
         });
 
+        //Reset Button
+        $('#resetButton').click(function () { 
+              location.reload();
+            
+        });
 
+        //Lap Button
+        $('#lapButton').click(function () { 
+                if(mode)
+                {
+                    clearInterval(action);
+                    lapCounter=0;
+                    startAction();
+                    //add Lap details
+                    addLap();
+                }
+            
+        });
+
+            function addLap()
+            {
+                lapNumber++;
+                let myLapDetails ='<div id="lapMain">'+
+                                        '<div id="lapNumber">'+'Lap'+lapNumber+'</div>'+
+                                        '<div id="lapTime">'+'<span>'+formatNumber(lapMinute)+'</span>'+':<span>'+formatNumber(lapSecond)+'</span>'+':<span>'+formatNumber(lapCentiseconds)+'</span>'+'</div>'+
+                                  '</div>'
+                $(myLapDetails).appendTo("#laps");
+            }
 });
 
-
+  
